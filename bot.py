@@ -13,6 +13,7 @@ def send_chat_action(chat_id, action: str, time: int = 2) -> None:
     bot.send_chat_action(chat_id, action)
 
 
+# Getting menu keyboard
 def get_menu_keyboard(menu_buttons: list, one_time: bool = True) -> ReplyKeyboardMarkup | None:
     keyboard = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=one_time)
     if menu_buttons:
@@ -59,6 +60,6 @@ def check_message(message):
     else:
         keyboard = get_menu_keyboard(['Menu'])
         send_chat_action(message.chat.id, chat_actions['text'])
-        bot.send_message(message.chat.id, "Sorry, I don't understand!\nUse help to open help list\n"
+        bot.send_message(message.chat.id, "Sorry, I don't understand!\nUse /help to open help list\n"
                                           "Or press button to open menu",
                          reply_markup=keyboard)
