@@ -1,4 +1,4 @@
-api_token = 'YOUR API TOKEN'
+api_token = '5376354396:AAGM3YlgS15hRiL5CoafHsX3cNiM__YbHTo'
 chat_actions = {'text': 'typing',
                 'document': 'upload_document',
                 'sticker': 'choose_sticker ',
